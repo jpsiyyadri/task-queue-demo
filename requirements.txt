@@ -1,2 +1,3 @@
 dramatiq[rabbitmq, watch]
+dramatiq[redis, watch]
 django
