@@ -45,7 +45,7 @@ start the worker by running following command
 
 
 #### Task Queue with dramatiq and redis
-### install rabbitmq
+### install redis
 * brew update
 * brew install redis
 * brew services start redis
@@ -55,7 +55,6 @@ start the worker by running following command
     import dramatiq
     import logging
     import time
-
     from dramatiq.brokers.redis import RedisBroker
 
     redis_broker = RedisBroker(host="localhost", port=6379)
@@ -64,7 +63,6 @@ start the worker by running following command
     logger = logging.getLogger(__name__)
 
     f = open("op.txt", "a")
-
 
     @dramatiq.actor
     def sub_task(name):

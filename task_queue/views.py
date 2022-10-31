@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 import logging
-from .worker import sub_task
+from .worker_with_redis_broker import sub_task
 
 logger = logging.getLogger(__name__)
 
